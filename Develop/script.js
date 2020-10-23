@@ -15,33 +15,34 @@ for (var i = 0; i < hours.length; i++) {
   var button = document.createElement("button")
 
   hourDisplay.textContent = hours[i];
-  hourDisplay.setAttribute("class", "hour col-md-1")
+  hourDisplay.setAttribute("class", "row col-md-1 hour")
 
 
 
-  txtDisplay.setAttribute("class", "description col-md-10 ")
+  txtDisplay.setAttribute("class", "col-md-10 description")
 
   
   button.textContent = "SAVE"
   button.setAttribute("class", "saveBtn col-md-1")
 
-//   txtDisplay.classList.add("textarea");
+  // txtDisplay.classList.add("textarea");
 
-  hourDiv.append(txtDisplay);
   hourDiv.append(hourDisplay);
+  hourDiv.append(txtDisplay);
   hourDiv.append(button)
 }
 
 var saveTask = document.querySelector(".saveBtn");
-var txt = document.querySelector(".description")
+var textInput = document.querySelector(".description")
 
 saveTask.addEventListener("click", function (event){
     event.preventDefault();
-    var newTask = txt.value
+    console.log("I've been clicked")
+    var newTask = textInput.value
     localStorage.setItem("To do", newTask)
 
 })
 
-var taskEntry = localStorage.getItem("newTask");
-txt.textContent = taskEntry;
+// var taskEntry = localStorage.getItem("newTask);
+// textInpu.textContent = taskEntry;
 
