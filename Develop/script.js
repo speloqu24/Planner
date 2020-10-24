@@ -33,7 +33,22 @@ for (var i = 0; i < hours.length; i++) {
   hourDiv.append(button);
 }
 
-function localStorage ( ){ 
+// function localStorage ( ){ 
+// var hourID = document.getElementById("hoursLoop");
+
+// var textInput = document.querySelectorAll(".description");
+
+// var textInputLocalStorage = textInput.value;
+// localStorage.setItem(hourID, textInputLocalStorage);
+
+// // }
+
+var saveTask = document.querySelector(".saveBtn");
+
+saveTask.addEventListener("click", function (event){
+    event.preventDefault();
+    console.log("clicked")
+
 var hourID = document.getElementById("hoursLoop");
 
 var textInput = document.querySelectorAll(".description");
@@ -41,14 +56,9 @@ var textInput = document.querySelectorAll(".description");
 var textInputLocalStorage = textInput.value;
 localStorage.setItem(hourID, textInputLocalStorage);
 
-}
 
-var saveTask = document.querySelector(".saveBtn");
 
-saveTask.addEventListener("click", function (event){
-    event.preventDefault();
-    console.log("clicked")
-    localStorage()
+
 })
 
 // var taskEntry = localStorage.getItem("newTask")
