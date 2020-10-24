@@ -19,12 +19,13 @@ for (var i = 0; i < hours.length; i++) {
   hourDisplay.setAttribute("id", "hoursLoop");
 
 
-
   txtDisplay.setAttribute("class", "col-md-10 description");
+  txtDisplay.setAttribute("id", "txtDescription")
 
   
   button.textContent = "SAVE";
   button.setAttribute("class", "saveBtn col-md-1");
+  button.setAttribute("id", "button" )
 
   // txtDisplay.classList.add("textarea");
 
@@ -32,6 +33,7 @@ for (var i = 0; i < hours.length; i++) {
   hourDiv.append(txtDisplay);
   hourDiv.append(button);
 }
+
 
 // function localStorage ( ){ 
 // var hourID = document.getElementById("hoursLoop");
@@ -43,23 +45,30 @@ for (var i = 0; i < hours.length; i++) {
 
 // // }
 
-var saveTask = document.querySelector(".saveBtn");
+// var saveTask = document.getElementById("button");
 
-saveTask.addEventListener("click", function (event){
-    event.preventDefault();
-    console.log("clicked")
+$(".saveBtn").on("click", function()
 
-var hourID = document.getElementById("hoursLoop");
-
-var textInput = document.querySelectorAll(".description");
-
-var textInputLocalStorage = textInput.value;
-localStorage.setItem(hourID, textInputLocalStorage);
+)
 
 
+// saveTask.addEventListener("click", function (event){
+//     event.preventDefault();
+//     console.log("clicked")
+// }
+//   var textInput = document.querySelectorAll(".description");
+//   // var hourID = document.getElementById("hoursLoop");
 
+//   for (var i=0; i< textInput.length; i++) {
+//   console.log(textInput[i].value);
 
-})
+//   var textInputLocalStorage = textInput[i].value;
+//   localStorage.setItem("to do", textInputLocalStorage);
+
+// }
+// })
+
+// var textInput = document.getElementById("txtDescription")
 
 // var taskEntry = localStorage.getItem("newTask")
 // textInput.textContent = taskEntry;
