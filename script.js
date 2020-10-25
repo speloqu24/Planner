@@ -1,12 +1,12 @@
 
 var timeDisplay = moment().format('LLLL')
+document.getElementById("currentDay").innerHTML = timeDisplay;
 
 var currentHour = moment().hours()
 currentHour = parseInt(currentHour)
 // verified number data type
-// console.log( typeof currentHour)
+console.log( typeof currentHour)
 // console.log(currentHour)
-document.getElementById("currentDay").innerHTML = timeDisplay;
 
 var task9 = document.getElementById("btn9");
 var taskTxt9 = document.getElementById("task9");
