@@ -1,9 +1,18 @@
 // variables for current date/time - this date/time will target the "currentDay" ID
 // moment.js doesn't seem to be working for me i.e. var today = moment();
-var today = moment().format("LLLL");
-// var now = moment().format("HH:MM")
-document.getElementById("currentDay").innerHTML = today;
+var currentHour = moment().hours()
+currentHour = parseInt(currentHour)
+// verified number data type
+// console.log( typeof currentHour)
+// console.log(currentHour)
+document.getElementById("currentDay").innerHTML = "Current hour: " + currentHour;
 
+
+// function timeCondition(){
+
+//     var ninetime = document.getElementById("9")
+//     console.log(ninetime)
+// }
 
 var task9 = document.getElementById("btn9");
 var taskTxt9 = document.getElementById("task9");
@@ -124,3 +133,21 @@ localStorage.setItem("fivePM", fivePM);
 
 var planner5get = localStorage.getItem("fivePM");
 taskTxt5.textContent = planner5get;
+
+
+$(".time-block").each(function() {
+var timeID = +($(this).attr("id"));
+var hourBlock = parseInt(timeID,("-")[1])
+// verified number data type
+//  console.log(typeof hourBlock)
+ console.log(hourBlock)
+
+
+ if (currentHour > hourBlock) {
+$(".time-block").addClass("past")
+ } else if (currentHour === hourBlock) {
+     $(".time-block").addClass("present")
+ } else (currentHour < hourBlock)
+     $(".time-block").addClass("future")
+
+})
