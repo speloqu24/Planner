@@ -138,19 +138,19 @@ $(".time-block").each(function () {
     
     
         if (currentHour > hourBlock) {
-            $(".time-block").addClass("past")
+            $(this).addClass("past")
             console.log("currentHour > Hourblock")
         
         }
     
     
         else if (currentHour === hourBlock) {
-            $(".time-block").addClass("present")
+            $(this).addClass("present")
             console.log("currentHour === Hourblock")
         }
     
         else if (currentHour < hourBlock) {
-            $(".time-block").addClass("future")
+            $(this).addClass("future")
             console.log("currentHour < hourblock")
         }
     
