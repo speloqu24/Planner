@@ -135,27 +135,23 @@ $(".time-block").each(function () {
     // verified number data type
     //  console.log(typeof hourBlock)
     console.log(currentHour, hourBlock)
-
-
-    if (currentHour > hourBlock) {
-        $(".time-block").addClass("past") // grey
-        console.log("currentHour > hourBlock")
-    } else if (currentHour === hourBlock) {
-         $(".time-block").addClass("present") // red
-        console.log("currentHour === hourBlock")
-    } else if (currentHour <  hourBlock) {
-         $(".time-block").addClass("future") //
-        console.log("currentHour === hourBlock")
-    }
-
-    // else if (currentHour === hourBlock) {
-    //     $("#task9").addClass("present")
-    //     console.log("currentHour === hourBlock")
-    // }
-
-    // else if (currentHour < hourBlock) {
-    //     $("#task9").addClass("future")
-    //     console.log("currentHour < hourBlock")
-    // }
-
+    
+    
+        if (currentHour > hourBlock) {
+            $(".time-block").addClass("past")
+            console.log("currentHour > Hourblock")
+        
+        }
+    
+    
+        else if (currentHour === hourBlock) {
+            $(".time-block").addClass("present")
+            console.log("currentHour === Hourblock")
+        }
+    
+        else if (currentHour < hourBlock) {
+            $(".time-block").addClass("future")
+            console.log("currentHour < hourblock")
+        }
+    
 })
